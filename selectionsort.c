@@ -1,14 +1,7 @@
 #include<stdio.h>
-void main()
-{
 int a[10],i,j,n,temp,min;
-printf("Enter the limit\n");
-scanf("%d",&n);
-printf("Enter the elements\n");
-for(i=0;i<n;i++)
+void selection()
 {
-scanf("%d",&a[i]);
-}
 for(i=0;i<n-1;i++)
 {
 min=i;
@@ -26,6 +19,17 @@ a[i]=a[min];
 a[min]=temp;
 }
 }
+}
+void main()
+{
+printf("Enter the limit\n");
+scanf("%d",&n);
+printf("Enter the elements\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+selection();
 printf("Sorted elements are\n");
 for(i=0;i<n;i++)
 {
