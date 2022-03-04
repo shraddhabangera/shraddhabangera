@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
-#define n 10
+#define n 6
 int stack[50],top=-1,i,ele;
 void push(int ele)
 {
@@ -26,6 +26,7 @@ exit(0);
 else
 {
 ele=stack[top--];
+printf("element %d is successfully poped",ele);
 return ele;
 }
 }
@@ -46,7 +47,7 @@ char c;
 int ch;
 while(1)
 {
-printf("Select your Options\n1.Push\n2.POP\n3.Display\n4.Quit\n");
+printf("\nSelect your Options\n1.Push\n2.POP\n3.Display\n4.Quit\n");
 printf("Enter your choice\n");
 scanf("%d",&ch);
 switch(ch)
@@ -54,15 +55,15 @@ switch(ch)
 case 1:printf("Enter the value\n");
         scanf("%d",&ele);
         push(ele);
+	printf("Value successfully Inserted\n");
         break;
 case 2:pop();
-break;
+	break;
 case 3:display();
-break;
+	break;
 case 4:printf("Thank you");
-exit(0);
+	exit(0);
 default:printf("Invalid Choice");
 }
-
 }
 }
